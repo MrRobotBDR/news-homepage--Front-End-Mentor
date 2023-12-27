@@ -1,23 +1,4 @@
 header {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 55px;
-}
-
-.logo {
-	width: 64px;
-}
-
-.main-nav {
-	ul {
-		display: flex;
-		gap: 40px;
-	}
-	li {
-		list-style: none;
-	}
-	a {
-		text-decoration: none;
-		color: $gunmetal-grey;
-	}
-}
+	a
