@@ -3,13 +3,24 @@ body {
 }
 
 .container {
-	width: 967px;
+	width: 1110px;
+	margin: 0 auto;
 }
 
-// Header
-
-header {
-	display: flex;
+.hero-image {
+	img {
+		width: 100%;
+	}
 }
 
-//test
+.main-heading {
+	h1 {
+		color: $dark-space-blue;
+
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 56px; /* 100% */
+		padding-right: 20px;
+	}
+}

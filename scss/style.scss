@@ -6,10 +6,13 @@
 // 2 - GLOBAL
 
 @import "2-global/typography";
+@import "2-global/reset";
 
-// 3 - MAIN
+// 3 - SECTIONS
 
-@import "3-main/main";
+@import "3-sections/main";
+@import "3-sections/grid";
+@import "3-sections/header";
 
 // 4 - CLICK
 @import "4-click/buttons";
