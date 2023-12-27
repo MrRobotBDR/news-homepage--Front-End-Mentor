@@ -5,11 +5,21 @@ body {
 .container {
 	width: 1110px;
 	margin: 0 auto;
+
+	@include breakpoint-mobile {
+		width: 343px;
+	}
 }
 
 .hero-image {
 	img {
 		width: 100%;
+
+		@include breakpoint-mobile {
+			width: 100%;
+			aspect-ratio: 3/2;
+			object-fit: cover;
+		}
 	}
 }
 
@@ -22,6 +32,12 @@ body {
 		font-weight: 800;
 		line-height: 56px; /* 100% */
 		padding-right: 20px;
+
+		@include breakpoint-mobile {
+			font-size: 40px;
+
+			line-height: 40px;
+		}
 	}
 }
 
@@ -46,7 +62,7 @@ body {
 	flex-direction: column;
 	background-color: $dark-space-blue;
 	color: $off-white;
-	padding: 30px 20px;
+	padding: 30px 30px;
 
 	h2 {
 		color: $yellow;
@@ -88,17 +104,16 @@ body {
 .post-container {
 	display: flex;
 	gap: 30px;
+	margin-bottom: 130px;
+
+	@include breakpoint-mobile {
+		flex-direction: column;
+	}
 }
 
 .post {
 	display: flex;
 	flex: 1;
-
-	&__image {
-		padding-right: 10px;
-		width: 100px;
-		height: 127px;
-	}
 
 	&__text {
 		h3 {
@@ -130,4 +145,11 @@ body {
 			line-height: 26px; /* 173.333% */
 		}
 	}
+}
+
+.post img {
+	margin-top: 0.4rem;
+	width: 100px;
+	height: 120px;
+	padding-right: 15px;
 }

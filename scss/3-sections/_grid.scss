@@ -8,11 +8,13 @@
 		"grid1 grid1 grid4"
 		"grid2 grid3 grid4";
 
-	//media MOBILE grid-template-areas:
-	// "grid1"
-	// "grid2"
-	// "grid3"
-	// "grid4";
+	@include breakpoint-mobile {
+		grid-template-areas:
+			"grid1"
+			"grid2"
+			"grid3"
+			"grid4";
+	}
 }
 
 .grid1 {

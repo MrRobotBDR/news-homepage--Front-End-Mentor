@@ -4,6 +4,10 @@ header {
 	align-items: center;
 	margin-bottom: 55px;
 	margin-top: 90px;
+
+	@include breakpoint-mobile {
+		margin-top: 28px;
+	}
 }
 
 .logo {
@@ -22,6 +26,8 @@ header {
 		text-decoration: none;
 		color: $gunmetal-grey;
 	}
-}
 
-//test
+	// @include breakpoint-mobile {
+	// 	display: none;
+	// }
+}
