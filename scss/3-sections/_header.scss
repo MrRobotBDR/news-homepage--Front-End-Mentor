@@ -1,7 +1,13 @@
 .header-container {
 	max-width: 1224px;
-	width: 92%;
 	margin: 0 auto;
+	margin-bottom: 55px;
+	margin-top: 90px;
+
+	@include breakpoint-mobile {
+		margin-bottom: 32px;
+		margin-top: 28px;
+	}
 }
 
 .navbar {
@@ -15,11 +21,23 @@
 	font-size: 2rem;
 }
 
+.logo {
+	width: 64px;
+}
+
 .nav-menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 60px;
+
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: $gunmetal-grey;
+	}
 }
 
 .nav-link {
@@ -27,7 +45,7 @@
 }
 
 .nav-link:hover {
-	color: dodgerblue;
+	color: $light-vermillion-red;
 }
 
 .hamburger {
@@ -37,15 +55,17 @@
 
 .bar {
 	display: block;
-	width: 25px;
+	width: 40px;
 	height: 3px;
 	margin: 5px auto;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	background-color: rgb(10, 10, 10);
+	background-color: $dark-space-blue;
 }
 
-@media (max-width: 1024px) {
+//HAMBURGER MENU
+
+@include breakpoint-mobile {
 	.hamburger {
 		display: block;
 	}
@@ -62,166 +82,29 @@
 
 	.nav-menu {
 		position: fixed;
-		left: -100%;
-		top: 70px;
-		gap: 0;
+		height: 100vh;
+		right: -90%;
+		top: 0px;
+		gap: 4px;
 		flex-direction: column;
-		background-color: #5c4242;
-		width: 100%;
+		justify-content: flex-start;
+		padding-top: 170px;
+		align-items: start;
+		background-color: $off-white;
+		width: 69%;
 		text-align: center;
 		transition: 0.3s;
+		margin-bottom: 50px;
+		color: $dark-space-blue;
+		font-size: 18px;
+		font-weight: 400;
 	}
 
 	.nav-item {
-		margin: 16px 0;
+		padding-bottom: 30px;
 	}
 
 	.nav-menu.active {
-		left: 0;
+		right: 0;
 	}
 }
-
-// header {
-// 	margin-bottom: 55px;
-// 	margin-top: 90px;
-
-// 	@include breakpoint-mobile {
-// 		margin-top: 28px;
-// 	}
-// }
-
-// .logo {
-// 	width: 64px;
-// }
-
-// .navbar {
-// 	min-height: 70px;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// }
-
-// .nav-branding {
-// 	font-size: 2rem;
-// }
-
-// .nav-menu {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	gap: 60px;
-
-// 	ul {
-// 		display: flex;
-// 		gap: 40px;
-// 	}
-// 	li {
-// 		list-style: none;
-// 	}
-// 	a {
-// 		text-decoration: none;
-// 		color: $gunmetal-grey;
-// 	}
-// }
-
-// .nav-link {
-// 	transition: 0.3s ease-out;
-// }
-
-// .nav-link:hover {
-// 	color: dodgerblue;
-// }
-
-// .hamburger {
-// 	display: none;
-// 	cursor: pointer;
-// }
-
-// .bar {
-// 	display: block;
-// 	width: 25px;
-// 	height: 3px;
-// 	margin: 5px auto;
-// 	-webkit-transition: all 0.3s ease;
-// 	transition: all 0.3s ease;
-// 	background-color: rgb(134, 59, 59);
-// }
-
-// @media (max-width: 1024px) {
-// 	.hamburger {
-// 		display: block;
-// 	}
-
-// 	.hamburger.active .bar:nth-child(2) {
-// 		opacity: 0;
-// 	}
-// 	.hamburger.active .bar:nth-child(1) {
-// 		transform: translateY(8px) rotate(45deg);
-// 	}
-// 	.hamburger.active .bar:nth-child(3) {
-// 		transform: translateY(-8px) rotate(-45deg);
-// 	}
-
-// 	.nav-menu {
-// 		position: fixed;
-// 		left: -100%;
-// 		top: 70px;
-// 		gap: 0;
-// 		flex-direction: column;
-// 		background-color: #262626;
-// 		width: 100%;
-// 		text-align: center;
-// 		transition: 0.3s;
-// 	}
-
-// 	.nav-item {
-// 		margin: 16px 0;
-// 	}
-
-// 	.nav-menu.active {
-// 		left: 0;
-// 	}
-// }
-
-// // .main-nav {
-// // 	ul {
-// // 		display: flex;
-// // 		gap: 40px;
-// // 	}
-// // 	li {
-// // 		list-style: none;
-// // 	}
-// // 	a {
-// // 		text-decoration: none;
-// // 		color: $gunmetal-grey;
-// // 	}
-// // }
-
-// // .hamburger {
-// // 	display: none;
-// // 	cursor: pointer;
-
-// // 	@include breakpoint-mobile {
-// // 		display: block;
-
-// // 		&.active .bar:nth-child(2) {
-// // 			opacity: 0;
-// // 		}
-// // 		&.active .bar:nth-child(1) {
-// // 			transform: translateY(8px) rotate(45deg);
-// // 		}
-// // 		&.active .bar:nth-child(3) {
-// // 			transform: translateY(-8px) rotate(-45deg);
-// // 		}
-// // 	}
-// // }
-
-// // .bar {
-// // 	display: block;
-// // 	width: 25px;
-// // 	height: 3px;
-// // 	margin: 5px auto;
-// // 	-webkit-transition: all 0.3s ease;
-// // 	transition: all 0.3s ease;
-// // 	background-color: white;
-// // }

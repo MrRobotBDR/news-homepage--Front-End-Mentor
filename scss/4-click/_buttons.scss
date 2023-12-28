@@ -8,4 +8,10 @@ button {
 	font-size: 14px;
 	letter-spacing: 4.375px;
 	font-weight: 700;
+	cursor: pointer;
+	transition: 0.4s;
+
+	&:hover {
+		background-color: $dark-space-blue;
+	}
 }

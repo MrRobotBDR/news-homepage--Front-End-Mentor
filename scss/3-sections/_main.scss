@@ -7,7 +7,7 @@ body {
 	margin: 0 auto;
 
 	@include breakpoint-mobile {
-		width: 343px;
+		width: 410px;
 	}
 }
 
@@ -16,9 +16,12 @@ body {
 		width: 100%;
 
 		@include breakpoint-mobile {
-			width: 100%;
-			aspect-ratio: 3/2;
-			object-fit: cover;
+			content: url("/assets/images/image-web-3-mobile.jpg");
+			/* Adjust any necessary styling for the smaller image */
+			/* For example:
+					width: 100%;
+					height: auto;
+					*/
 		}
 	}
 }
@@ -42,16 +45,12 @@ body {
 }
 
 .cta-section {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
-
 	p {
 		color: $gunmetal-grey;
 		font-size: 15px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 26px; /* 173.333% */
+		line-height: 26px;
 		margin-bottom: 30px;
 	}
 }
@@ -116,6 +115,16 @@ body {
 	flex: 1;
 
 	&__text {
+		a {
+			color: $dark-space-blue;
+			text-decoration: none;
+			font-style: inherit;
+
+			&:hover {
+				color: $light-vermillion-red;
+				transition: 0.2s;
+			}
+		}
 		h3 {
 			color: $silver;
 			/* Heading (M) */
@@ -126,7 +135,6 @@ body {
 		}
 
 		h4 {
-			color: $dark-space-blue;
 			/* Heading (XS) */
 			font-size: 18px;
 			font-style: normal;
@@ -136,11 +144,8 @@ body {
 
 		p {
 			color: $gunmetal-grey;
-
 			/* Body */
-
 			font-size: 15px;
-
 			font-weight: 400;
 			line-height: 26px; /* 173.333% */
 		}
