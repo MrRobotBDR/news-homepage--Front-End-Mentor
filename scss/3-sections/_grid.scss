@@ -4,28 +4,4 @@
 	display: grid;
 	grid-gap: 30px;
 	margin-bottom: 70px;
-	grid-template-areas:
-		"grid1 grid1 grid4"
-		"grid2 grid3 grid4";
-
-	@include breakpoint-mobile {
-		grid-template-areas:
-			"grid1"
-			"grid2"
-			"grid3"
-			"grid4";
-	}
-}
-
-.grid1 {
-	grid-area: grid1;
-}
-.grid2 {
-	grid-area: grid2;
-}
-.grid3 {
-	grid-area: grid3;
-}
-.grid4 {
-	grid-area: grid4;
-}
+	grid-
